@@ -1,0 +1,64 @@
+.Navbar { 
+  border-bottom: 0.5px solid grey;
+}
+
+.navbar-brand-box {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  .nav-links {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    .link-1 {
+      text-decoration: none;
+      color: #909090;
+      a {
+        color: #909090;
+        font-family: 'Roboto-Regular', 'Roboto';
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+          text-decoration: none !important; 
+          color: #E8E8E8;
+        }
+      }
+      
+    }
+    .link-2 {
+      a {
+        color: #909090;
+        font-family: 'Roboto-Regular', 'Roboto';
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+          text-decoration: none !important; 
+          color: #E8E8E8;
+        }
+      }
+      
+    }
+    .link-3 {
+      a {
+        color: #909090;
+        font-family: 'Roboto-Regular', 'Roboto';
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+          text-decoration: none !important; 
+          color: #E8E8E8;
+        }
+      }
+      
+    }
+  }  
+}
+

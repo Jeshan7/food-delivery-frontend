@@ -1,0 +1,54 @@
+.AuthenticationPage {
+    padding: 0 !important;
+    margin: 0 !important;
+    .row {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100vh;
+        .col-login {
+            padding: 0 !important;
+            margin: 0 !important;
+            height: 100%;
+            display: flex;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            .login-container{
+                width: 100%;
+                height: 50%;
+                border: 1px solid red;
+            }
+        }
+        .col-picture {
+            padding: 0 !important;
+            margin: 0 !important;
+            height: 100%;
+            .image-container {
+                width: 100%;
+                height: 100%;
+                background-image: url("../images/auth-image.jpg");
+                background-position: center;
+                background-repeat: repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .btn-signup {
+                border: 4px solid #fff;
+                background: none;
+                padding: 10px;
+                width: 20%;
+                color: #fff;
+                transition: 0.5s;
+                font-family: 'Roboto-Regular', 'Roboto';
+                font-size: 20px;
+                font-weight: 800;
+                &:hover {
+                  background: #fff;
+                  color: #000;
+                }
+            }
+        }
+    }
+}

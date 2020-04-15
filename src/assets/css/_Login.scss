@@ -1,0 +1,73 @@
+.Login {
+    width: 100%;
+    height: 100%;
+    
+    // border-radius: 0;
+    // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto-Regular', 'Roboto';
+    background-color: white;
+}
+
+  .login-header {  
+      font-family: 'Roboto-Regular', 'Roboto';  
+      padding: 20px 0 0 0;
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+.login-form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding: 0 0 100px 0;
+  .login-email{
+    border-radius: 0;
+    border: none !important;
+    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0 30px 0;
+    font-family: 'Roboto-Regular', 'Roboto';
+    &:focus {
+      animation-name: login-animation;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+  .login-password {
+    border-radius: 0;
+    border: none !important;
+    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto-Regular', 'Roboto';
+    &:focus {
+      animation-name: login-animation;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    } 
+  }
+  .button-wrapper {
+    padding-top: 30px;
+    .login-btn {
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,71,105,1) 56%, rgba(25,175,205,1) 100%);
+      width: 140px;
+      border: none;
+      padding: 10px;
+      color: white;
+      font-family: 'Roboto-Regular', 'Roboto';
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
+      &:hover {
+        opacity: 0.9;
+        box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+        transition: 0.8s;
+      }
+      @keyframes login-animation {
+        100% {
+          transform: scale(1.5, 1.5) translateZ(5px) ;
+        }
+      }
+    }
+  }
+}
