@@ -1,0 +1,52 @@
+.card-container {
+    background-color: white;
+    height: 250px;
+    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    // &:hover {
+    //     .restaurant-image {
+    //         width: 50%;
+    //     }
+    // }
+    .restaurant-image {
+        height: 100%;
+        width: 50%;
+        // width: 50%;
+
+        background-image: url("../images/auth-image11.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 1s;
+    }
+    .restaurant-details {
+        width: 50%;
+        height: 100%;
+        .rating-container {
+            border: 1px solid black;
+            height: 40%;
+            display: flex;
+            justify-content: flex-end;
+            .rating {
+                border: 1px solid black;
+                width: 15%;
+                height: 100%;
+            }
+        }
+        .second-container {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            .address {
+                width: 70%;
+                height: 100%;
+                background-color: green;
+            }
+            .call {
+                width: 30%;
+                height: 100%;
+                background-color: red;
+            }
+        }
+    }
+}

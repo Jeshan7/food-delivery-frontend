@@ -7,6 +7,7 @@ import Login from '../src/components/Login';
 import Register from '../src/components/Register';
 import { connect } from 'react-redux';
 import AuthenticationPage from './components/Authentication_Page';
+import SearchContainer from './components/Restaurants/SearchContainer';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="/" exact component={Homepage} />
           <Route path="/login"  component={AuthenticationPage} />
           <Route path="/register" component={AuthenticationPage} />
-          {/* <Route path="/auth" component={AuthenticationPage}/> */}
+          <Route path="/restaurants" component={SearchContainer}/>
         </Switch>
         
       </Router>

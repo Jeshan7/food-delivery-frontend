@@ -4,4 +4,34 @@
 
 .row-footer {
   height: 250px;
+  .left-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .left-content {
+        width: 60%;
+        height: 60%;
+        border: 1px solid black;     
+      }
+  }
+  .center-container {;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      .center-content {
+        width: 80%;
+        height: 80%;  
+        border: 1px solid black; 
+      };
+  }
+  .right-container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      .right-content {
+        width: 80%;
+        height: 80%;     
+        border: 1px solid black;    
+      }
+  }
 }

@@ -1,7 +1,99 @@
 .Overview {
     background-color: #e5e5e5;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row-overview {
-    height: 500px;
+    width: 90%;
+    height: 80%;
+    .left-card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left-card {
+            background: white;
+            box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+            width: 90%;
+            height: 100%;
+            &:hover {
+                .card-image-container {
+                    height: 50%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            .card-image-container {
+                width: 100%;
+                height: 100%;
+                background-image: url("../images/card-image-1.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: pointer;
+                transition: 1s;
+            }
+        }
+    }
+    .center-card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .center-card {
+            background: white;
+            box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+            width: 90%;
+            height: 100%;
+            &:hover {
+                .card-image-container {
+                    height: 50%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            .card-image-container {
+                width: 100%;
+                height: 100%;
+                background-image: url("../images/card-image-2.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: pointer;
+                transition: 1s;
+            }
+        }
+    }
+    .right-card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .right-card {
+            background: white;
+            box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+            width: 90%;
+            height: 100%;
+            &:hover {
+                .card-image-container {
+                    height: 50%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            .card-image-container {
+                width: 100%;
+                height: 100%;
+                background-image: url("../images/card-image-3.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: pointer;
+                transition: 1s;
+            }
+        }
+    }
 }
