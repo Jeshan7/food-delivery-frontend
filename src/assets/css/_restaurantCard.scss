@@ -11,13 +11,38 @@
     .restaurant-image {
         height: 100%;
         width: 50%;
-        // width: 50%;
-
         background-image: url("../images/auth-image11.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         transition: 1s;
+        display: flex;
+        justify-content: center;
+        .btn-container {
+            width: 100%;
+            align-self: center;
+            .btn-view-menu {
+                border: 4px solid #fff;
+                background: none;
+                padding: 10px;
+                width: 50%;
+                transition: 0.5s;
+                font-family: "Roboto-Regular", "Roboto";
+                font-size: 20px;
+                font-weight: 800;
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
     .restaurant-details {
         width: 50%;
@@ -40,12 +65,12 @@
             .address {
                 width: 70%;
                 height: 100%;
-                background-color: green;
+                border: 1px solid black;
             }
             .call {
                 width: 30%;
                 height: 100%;
-                background-color: red;
+                border: 1px solid black;
             }
         }
     }
