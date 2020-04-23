@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../assets/css/Homepage.scss';
+import { Link } from 'react-router-dom';
 
 const RestaurantCard = () => {
   return(
@@ -8,7 +9,7 @@ const RestaurantCard = () => {
         <div className="restaurant-image">
           <div className="btn-container">
             <button className="btn-view-menu">
-              View Menu
+              <Link to="/restaurant">View Menu</Link>
             </button>
           </div>
         </div>

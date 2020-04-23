@@ -1,0 +1,163 @@
+.RestaurantContainer {
+    height: 100vh;
+    .row-pictures {
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        .col-pictures {
+            padding: 0 !important;
+            margin: 0 !important;
+            background-image: url("../images/homepage.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    .row-options {
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        .col-options {
+            padding: 0 !important;
+            margin: 0 !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .option-navigation {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
+                .overview {
+                    // background-color: yellow;
+                    // border-radius: 5px;
+                    width: 30%;
+                    height: 90%;
+                    cursor: pointer;
+                    display: flex;
+                    font-family: "Roboto-Regular", "Roboto";
+                    font-size: 18px;
+                    font-weight: 600;
+                    .image-overview {
+                        width: 40%;
+                        // border: 1px solid black;
+                        background-image: url("../images/option-overview.png");
+                        background-repeat: no-repeat;
+                    }
+                    .text-overview {
+                        // border: 1px solid black;
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &:hover {
+                        box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
+                        .image-overview {
+                            // background-image: url("../images/option-overview.png");
+                            transform: translateZ(-100px)
+                        }
+                    }
+                }
+                .menu {
+                    // background-color: green;
+                    // border-radius: 5px;
+                    width: 30%;
+                    height: 90%;
+                    cursor: pointer;
+                    display: flex;
+                    font-family: "Roboto-Regular", "Roboto";
+                    font-size: 18px;
+                    font-weight: 600;
+                    .image-menu {
+                        width: 40%;
+                        // border: 1px solid black;
+                        background-image: url("../images/option-menu.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .text-menu {
+                        // border: 1px solid black;
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &:hover {
+                        box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
+                        .image-menu {
+                            // background-image: url("../images/option-overview.png");
+                            // transform: translateZ(-100px)
+                        }
+                    }
+                }
+                .photos {
+                    // background-color: red;
+                    // border-radius: 5px;
+                    width: 30%;
+                    height: 90%;
+                    cursor: pointer;
+                    display: flex;
+                    font-family: "Roboto-Regular", "Roboto";
+                    font-size: 18px;
+                    font-weight: 600;
+                    .image-photos {
+                        width: 40%;
+                        // border: 1px solid black;
+                        background-image: url("../images/option-photo.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .text-photos {
+                        // border: 1px solid black;
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &:hover {
+                        box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
+                        .image-photos {
+                            // background-image: url("../images/option-overview.png");
+                            // transform: translateZ(-100px)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .row-content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        .col-content {
+            padding: 0 !important;
+            margin: 0 !important;
+            // border: 1px solid black;
+            .Menu {
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                height: 100%;
+            }
+            .Photos {
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                height: 100%;
+            }
+            .RestaurantOverview {
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                height: 100%;
+            }
+        }
+    }
+    .footer-restaurant {
+        width: 100%;
+        height: 5%;
+        background-color: red;
+    }
+}

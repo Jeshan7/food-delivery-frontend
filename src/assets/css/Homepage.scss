@@ -2,9 +2,9 @@
     font-family: 'Roboto-Regular', 'Roboto';
     padding: 0 !important;
     margin: 0 !important;
-    background-image: url("../images/image.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    // background-image: url("../images/image.jpg");
+    // background-position: center;
+    // background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
     opacity: 0.85;
@@ -19,3 +19,4 @@
 @import "searchContainer.scss";
 @import "header.scss";
 @import "searchContainer.scss";
+@import "restaurantContainer.scss";

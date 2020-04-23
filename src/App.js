@@ -7,7 +7,8 @@ import Login from '../src/components/Login';
 import Register from '../src/components/Register';
 import { connect } from 'react-redux';
 import AuthenticationPage from './components/Authentication_Page';
-import SearchContainer from './components/Restaurants/SearchContainer';
+import SearchContainer from './components/RestaurantsList/SearchContainer';
+import RestaurantContainer from './containers/RestaurantContainer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login"  component={AuthenticationPage} />
           <Route path="/register" component={AuthenticationPage} />
           <Route path="/restaurants" component={SearchContainer}/>
+          <Route path="/restaurant" component={RestaurantContainer}/>
         </Switch>
         
       </Router>
