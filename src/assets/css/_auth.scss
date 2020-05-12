@@ -13,9 +13,9 @@
             border: 1px solid black;
             justify-content: center;
             align-items: center;
-            .login-container{
+            .login-container {
                 width: 100%;
-                height: 50%;
+                height: 90%;
                 border: 1px solid red;
             }
         }
@@ -33,20 +33,43 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                .btn-signup {
+                    border: 4px solid #fff;
+                    background: none;
+                    padding: 10px;
+                    width: 20%;
+                    color: #fff;
+                    transition: 0.5s;
+                    font-family: "Roboto-Regular", "Roboto";
+                    font-size: 20px;
+                    font-weight: 800;
+                    &:hover {
+                        background: #fff;
+                        color: #000;
+                    }
+                }
             }
-            .btn-signup {
-                border: 4px solid #fff;
-                background: none;
-                padding: 10px;
-                width: 20%;
-                color: #fff;
-                transition: 0.5s;
-                font-family: 'Roboto-Regular', 'Roboto';
-                font-size: 20px;
-                font-weight: 800;
-                &:hover {
-                  background: #fff;
-                  color: #000;
+            .link-home {
+                position: absolute;
+                bottom: 10%;
+                border: 2px solid white;
+                width: 35%;
+                padding: 5px;
+                &:hover{
+                    background-color: #fff;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: "Roboto-Regular", "Roboto";
+                    font-size: 20px;
+                    font-weight: 600;
+                    &:hover {
+                        text-decoration: none;
+                        color: #000;
+                        
+                    }
                 }
             }
         }

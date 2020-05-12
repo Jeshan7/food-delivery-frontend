@@ -1,13 +1,14 @@
-import React from 'react';
-import '../../assets/css/Homepage.scss';
-import RestaurantCard from './RestaurantCard';
+import React from "react";
+import "../../assets/css/Homepage.scss";
+import RestaurantCard from "./RestaurantCard";
 
 const RestaurantsList = () => {
-  return(
+  return (
     <div className="RestaurantsList">
-        <RestaurantCard />
+      <RestaurantCard />
     </div>
   );
-}
+};
 
 export default RestaurantsList;
+  

@@ -4,14 +4,22 @@
     .row-search-container {
         width: 100%;
         height: 35%;
-        background-color: gold;
+        // background-color: gold;
         display: flex;
         justify-content: center;
         align-items: center;
         .search-box {
             width: 90%;
             height: 30%;
-            border: 1px solid black;
+
+            .input-search {
+                width: 60%;
+                height: 100%;
+                box-shadow: none;
+                font-family: "Roboto-Regular", "Roboto";
+                font-size: 20px;
+                font-weight: 800;
+            }
         }
     }
     .row-restaurants-container {
@@ -42,7 +50,7 @@
             }
         }
         .col-restaurants-container {
-            border: 1px solid black;
+            // border: 1px solid black;
             padding: 0 !important;
             margin: 0 !important;
             display: flex;

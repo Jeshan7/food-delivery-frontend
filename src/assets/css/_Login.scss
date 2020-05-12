@@ -1,73 +1,71 @@
 .Login {
-    width: 100%;
-    height: 100%;
-    
-    // border-radius: 0;
-    // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto-Regular', 'Roboto';
-    background-color: white;
-}
-
-  .login-header {  
-      font-family: 'Roboto-Regular', 'Roboto';  
-      padding: 20px 0 0 0;
-      font-size: 40px;
-      font-weight: 600;
-    }
-
-.login-form {
-  margin: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  // padding: 0 0 100px 0;
-  .login-email{
-    border-radius: 0;
-    border: none !important;
-    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
-    margin: 0 0 30px 0;
-    font-family: 'Roboto-Regular', 'Roboto';
-    &:focus {
-      animation-name: login-animation;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
+  #bf-1 {
+    &:hover {
+      opacity: 0;
     }
   }
-  .login-password {
-    border-radius: 0;
-    border: none !important;
-    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto-Regular', 'Roboto';
-    &:focus {
-      animation-name: login-animation;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-    } 
+  #b1,
+  #b2,
+  #b3 {
+    animation: bubble 1s ease-in-out infinite;
   }
-  .button-wrapper {
-    padding-top: 30px;
-    .login-btn {
-      background: rgb(2,0,36);
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,71,105,1) 56%, rgba(25,175,205,1) 100%);
-      width: 140px;
-      border: none;
-      padding: 10px;
-      color: white;
-      font-family: 'Roboto-Regular', 'Roboto';
-      font-weight: 600;
-      font-size: 16px;
-      box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
-      &:hover {
-        opacity: 0.9;
-        box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
-        transition: 0.8s;
-      }
-      @keyframes login-animation {
-        100% {
-          transform: scale(1.5, 1.5) translateZ(5px) ;
+  #bubbles {
+    animation: bubbles 5s ease-in-out infinite;
+  }
+  .login-form {
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    .input-email {
+      width: 60%;
+      input {
+        border-radius: 0;
+        padding: 0 !important;
+        border: none;
+        border-bottom: 2px solid #e5e5e5;
+        box-shadow: none;
+        &:focus {
+          // box-shadow: none;
+          // outline: 0 !important;
+          border-bottom: 2px solid cyan;
         }
       }
     }
+    .input-password {
+      width: 60%;
+      input {
+        border-radius: 0;
+        padding: 0 !important;
+        border: none;
+        border-bottom: 2px solid #e5e5e5;
+        box-shadow: none;
+        &:focus {
+          border-bottom: 2px solid cyan;
+        }
+      }
+    }
+    .button-wrapper {
+      width: 60%;
+      height: 15%;
+      // background-color: red;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@keyframes bubbles {
+  75% {
+    transform: translate(0px, 20px);
   }
 }
