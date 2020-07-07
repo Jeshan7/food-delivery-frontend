@@ -1,29 +1,44 @@
 import React from "react";
 import "../../assets/css/Homepage.scss";
 import { Link } from "react-router-dom";
-
-const RestaurantCard = () => {
+import { withRouter } from "react-router";
+const RestaurantCard = (props) => {
   return (
     <div className="RestaurantCard">
       <div className="card-container">
         <div className="restaurant-image">
           <div className="btn-container">
             <button className="btn-view-menu">
-              <Link to="/restaurant">View Menu</Link>
+              <Link to={`/restaurant/${props.restaurantDetails._id}`}>
+                View Menu
+              </Link>
+              {/* <button onClick={handleViewMenu}>View Menu</button> */}
             </button>
           </div>
         </div>
         <div className="restaurant-details">
           <div className="restaurant-name">
-            <div className="value-restaurant-name">Name</div>
+            <div className="value-restaurant-name">
+              <span className="text-restaurant-name">
+                {props.restaurantDetails.name}
+              </span>
+            </div>
             {/* <div className="rating">rating</div> */}
           </div>
           <div className="second-container">
-            <div className="address">
-              <div className="value-address">Address</div>
+            <div className="description">
+              <div className="value-description">
+                {/* {props.restaurantDetails.location} */}
+                <span>
+                  qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsa
+                </span>
+              </div>
             </div>
-            <div className="call">
-              <div className="value-call">Call</div>
+            <div className="address">
+              <div className="value-address">
+                <span>City</span>
+                <span>Mumbai</span>
+              </div>
             </div>
           </div>
         </div>

@@ -14,12 +14,12 @@ const Header = () => {
             <Link to="/restaurants">Order Now</Link>
           </button>
         </div>
-        <div className="xyz">
-          <video autoPlay loop muted>
-            <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        {/* <div className="video-container"> */}
+        <video autoPlay loop muted>
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* </div> */}
       </div>
     </div>
   );

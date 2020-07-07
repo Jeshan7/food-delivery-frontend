@@ -1,30 +1,151 @@
 .row-container {
     width: 100%;
-    height: 100vh;
+    height: 900px;
     .row-search-container {
         width: 100%;
         height: 35%;
-        // background-color: gold;
+        background-color: #1f1f1f;
         display: flex;
         justify-content: center;
         align-items: center;
-        .search-box {
-            width: 90%;
-            height: 30%;
-
-            .input-search {
-                width: 60%;
+        .SearchBar {
+            width: 80%;
+            height: 85%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            .select-city-container {
+                width: 15%;
                 height: 100%;
-                box-shadow: none;
-                font-family: "Roboto-Regular", "Roboto";
-                font-size: 20px;
-                font-weight: 800;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid red;
+                .current-city {
+                    width: 60%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // border: 1px solid yellow;
+                    span {
+                        color: #fff;
+                    }
+                }
+                .options-city {
+                    width: 100%;
+                    height: 80%;
+                    background-color: #181818;
+                    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                    // border: 1px solid green;
+
+                    .options {
+                        width: 100%;
+                        height: 25%;
+                        border-bottom: 1px solid yellow;
+                        // border: 1px solid yellow;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:hover {
+                            background-color: yellow;
+                        }
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .search-container {
+                width: 80%;
+                height: 100%;
+                border: 1px solid green;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                .search-box {
+                    width: 60%;
+                    height: 30%;
+                    border-radius: none;
+                    // border: 1px solid red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #191919;
+                    // box-shadow: 3px 2px 5px grey;
+                    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                    .form-container {
+                        width: 97%;
+                        height: 80%;
+                        border-radius: none;
+                        background-color: #89cff0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                        box-shadow: 2px 2px 30px #89cff0;
+                        input {
+                            width: 90%;
+                            height: 80%;
+                            box-shadow: none;
+                            border-radius: none;
+                            // line-height: 1;
+                            border: none;
+                            background-color: #89cff0;
+                            font-family: "Roboto-Regular", "Roboto";
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: #fff;
+                            // box-shadow: 10px 10px 30px #89cff0;
+                            // box-shadow: 3px 3px 10px #89cff0;
+
+                            &:focus {
+                                outline: none;
+                            }
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .suggestion-container {
+                    width: 60%;
+                    height: 50%;
+                    background-color: #1f1f1f;
+                    // border: 1px solid red;
+                    .suggestions {
+                        width: 100%;
+                        height: 100%;
+                        // border: 1px solid green;
+                        background-color: #000;
+                        color: #fff;
+
+                        .suggestion-items {
+                            width: 100%;
+                            height: 30%;
+                            // border: 1px solid red;
+                            border-bottom: 1px solid #e5e5e5;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            &:hover {
+                                background-color: #48d1cc;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
     .row-restaurants-container {
         width: 100%;
         height: 100%;
+        background-color: #1f1f1f;
         .col-filter-container {
             padding: 0 !important;
             margin: 0 !important;
@@ -33,20 +154,87 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
-            .filter-1 {
+            .filter-ratings {
                 width: 80%;
                 height: 30%;
-                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                background-color: #181818;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                .heading-ratings {
+                    width: 100%;
+                    height: 40%;
+                    // border: 1px solid yellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        color: #fff;
+                        font-size: 30px;
+                    }
+                }
+                .slider-container {
+                    width: 100%;
+                    height: 30%;
+
+                    // flex-basis: 10px;
+                    // border: 2px solid red;
+                }
+                .ratings-value {
+                    width: 100%;
+                    height: 20%;
+                    // border: 1px solid yellow;
+                    span {
+                        color: #fff;
+                        font-size: 25px;
+                    }
+                }
             }
-            .filter-2 {
+            .filter-cost {
                 width: 80%;
                 height: 30%;
-                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                background-color: #181818;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                .heading-cost {
+                    width: 100%;
+                    height: 40%;
+                    // border: 1px solid yellow;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        color: #fff;
+                        font-size: 30px;
+                    }
+                }
+                .slider-container {
+                    width: 100%;
+                    height: 30%;
+
+                    // flex-basis: 10px;
+                    // border: 2px solid red;
+                }
+                .cost-value {
+                    width: 100%;
+                    height: 20%;
+                    // border: 1px solid yellow;
+                    span {
+                        color: #fff;
+                        font-size: 25px;
+                    }
+                }
             }
             .filter-3 {
                 width: 80%;
                 height: 30%;
                 box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
+                background-color: #000;
             }
         }
         .col-restaurants-container {
@@ -59,7 +247,9 @@
                 width: 80%;
                 height: 100%;
                 display: flex;
+                margin-top: 2%;
                 flex-direction: column;
+                // border: 1px solid red;
                 // justify-content: space-evenly;
                 @import "restaurantCard.scss";
             }

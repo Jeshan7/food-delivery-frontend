@@ -1,14 +1,15 @@
 .Overview {
-    
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1f1f1f;
 }
 
 .row-overview {
     width: 90%;
     height: 80%;
+
     .left-card-container {
         display: flex;
         justify-content: center;

@@ -3,6 +3,7 @@
     height: 250px;
     box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
     display: flex;
+    margin-top: 3%;
     // &:hover {
     //     .restaurant-image {
     //         width: 50%;
@@ -47,19 +48,31 @@
     .restaurant-details {
         width: 50%;
         height: 100%;
+        background-color: #181818;
         .restaurant-name {
-            border: 1px solid black;
+            // border: 1px solid #fff;
+            color: #fff;
             height: 40%;
             display: flex;
             justify-content: center;
             align-items: center;
             .value-restaurant-name {
-                border: 1px solid black;
+                background-color: #071e3d;
+                box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
                 width: 80%;
                 height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    font-family: "Roboto-Regular", "Roboto";
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
             }
             // .rating {
-            //     border: 1px solid black;
+            //     border: 1px solid #fff;
             //     width: 15%;
             //     height: 100%;
             // }
@@ -68,31 +81,58 @@
             width: 100%;
             height: 60%;
             display: flex;
-            .address {
+            .description {
                 width: 70%;
                 height: 100%;
-                border: 1px solid black;
+                // border: 1px solid #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .value-description {
+                    // border: 1px solid #fff;
+                    // background-color: #fff;
+                    background-color: #071e3d;
+                    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                    width: 80%;
+                    height: 80%;
+                    text-align: left;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    span {
+                        width: 90%;
+                        color: #fff;
+                        // border: 1px solid red;
+                        font-family: "Roboto-Regular", "Roboto";
+                        overflow-wrap: break-word;
+                        // text-overflow: clip;
+                        // padding: 5px;
+                    }
+                }
+            }
+            .address {
+                width: 30%;
+                height: 100%;
+                // border: 1px solid #fff;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 .value-address {
-                    border: 1px solid black;
+                    // border: 1px solid #fff;
+                    // background-color: #fff;
+                    background-color: #071e3d;
+                    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
                     width: 80%;
                     height: 80%;
-                    text-align: left;
-                }
-            }
-            .call {
-                width: 30%;
-                height: 100%;
-                border: 1px solid black;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .value-call {
-                    border: 1px solid black;
-                    width: 80%;
-                    height: 80%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+                    span {
+                        color: #fff;
+                        font-family: "Roboto-Regular", "Roboto";
+                        font-size: 20px;
+                    }
                 }
             }
         }

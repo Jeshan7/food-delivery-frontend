@@ -4,6 +4,7 @@
         height: 50%;
         display: flex;
         justify-content: center;
+        background-color: #1f1f1f;
         .col-pictures {
             padding: 0 !important;
             margin: 0 !important;
@@ -20,6 +21,7 @@
         height: 20%;
         display: flex;
         justify-content: center;
+        background-color: #1f1f1f;
         .col-options {
             padding: 0 !important;
             margin: 0 !important;
@@ -60,7 +62,7 @@
                         box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.2);
                         .image-overview {
                             // background-image: url("../images/option-overview.png");
-                            transform: translateZ(-100px)
+                            transform: translateZ(-100px);
                         }
                     }
                 }
@@ -137,6 +139,7 @@
         height: 100%;
         display: flex;
         justify-content: center;
+        background-color: #1f1f1f;
         .col-content {
             padding: 0 !important;
             margin: 0 !important;
