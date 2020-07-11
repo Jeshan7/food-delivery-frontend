@@ -8,6 +8,7 @@ import {
 import { withRouter } from "react-router-dom";
 // import Drop from "../Dropdown";
 import useOnClickOutside from "use-onclickoutside";
+import search_icon from "../../assets/images/search.png";
 
 const SearchBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,19 +26,19 @@ const SearchBar = (props) => {
   const handleSearch = (e) => {
     dispatch(suggestRestaurants(e.target.value));
     setName(e.target.value);
-    if (restaurants.length > 0) {
+    console.log("aaa", restaurants);
+    if (restaurants && restaurants.length > 0) {
       setIsOpen(true);
-      console.log("sas", isOpen);
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searchRestaurants(name));
+    openModal(false);
   };
 
   const handleSuggestion = (restaurant_id) => {
-    console.log("sasddd", restaurant_id);
     props.history.push(`/restaurant/${restaurant_id}`);
   };
 
@@ -49,6 +50,7 @@ const SearchBar = (props) => {
     localStorage.setItem("current-city", city);
     openModal(false);
   };
+
   return (
     <div className="SearchBar">
       <div className="search-container">
@@ -59,8 +61,8 @@ const SearchBar = (props) => {
               placeholder="Search"
               onChange={handleSearch}
             />
-            <button type="submit" className="btn-search">
-              Search
+            <button className="btn-search">
+              <img type="submit" src={search_icon} width="48px" height="48px" />
             </button>
           </form>
         </div>
@@ -74,7 +76,7 @@ const SearchBar = (props) => {
                     className="suggestion-items"
                     onClick={() => handleSuggestion(doc.restaurant_id)}
                   >
-                    <div>{doc.name}</div>
+                    <span>{doc.name}</span>
                   </div>
                 );
               })}

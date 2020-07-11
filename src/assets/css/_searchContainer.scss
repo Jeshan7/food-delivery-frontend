@@ -11,7 +11,7 @@
         .SearchBar {
             width: 80%;
             height: 85%;
-            border: 1px solid black;
+            // border: 1px solid black;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -23,7 +23,7 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: column;
-                border: 1px solid red;
+                // border: 1px solid red;
                 .current-city {
                     width: 60%;
                     height: 20%;
@@ -31,30 +31,45 @@
                     justify-content: center;
                     align-items: center;
                     // border: 1px solid yellow;
+                    border-radius: 50px;
+                    background: linear-gradient(to right, #36d1dc, #5b86e5);
+                    box-shadow: 0 -3px 20px 0 linear-gradient(to right, #36d1dc, #5b86e5);
+                    transition: 0.4s;
+                    &:hover {
+                        border-radius: 0px;
+                    }
                     span {
                         color: #fff;
+                        font-size: 18px;
+                        font-weight: 600;
+                        font-family: "Roboto-Regular", "Roboto";
                     }
                 }
                 .options-city {
-                    width: 100%;
+                    width: 80%;
                     height: 80%;
                     background-color: #181818;
                     box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
                     // border: 1px solid green;
-
+                    border-radius: 40px;
                     .options {
                         width: 100%;
                         height: 25%;
-                        border-bottom: 1px solid yellow;
+                        border-bottom: 0.01em solid #fff;
                         // border: 1px solid yellow;
+                        border-radius: 40px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         &:hover {
-                            background-color: yellow;
+                            // background-color: yellow;
+                            background: linear-gradient(to right, #283c86, #45a247);
                         }
                         span {
                             color: #fff;
+                            font-size: 15px;
+                            font-weight: 600;
+                            font-family: "Roboto-Regular", "Roboto";
                         }
                     }
                 }
@@ -62,7 +77,7 @@
             .search-container {
                 width: 80%;
                 height: 100%;
-                border: 1px solid green;
+                // border: 1px solid green;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -75,40 +90,51 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: #191919;
+                    // background-color: #191919;
                     // box-shadow: 3px 2px 5px grey;
-                    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                    // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
+                    // border: 1px solid red;
                     .form-container {
-                        width: 97%;
-                        height: 80%;
+                        width: 100%;
+                        height: 90%;
                         border-radius: none;
-                        background-color: #89cff0;
+                        // background-color: #89cff0;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
-                        box-shadow: 2px 2px 30px #89cff0;
+                        padding: 10px;
+                        border-bottom: 1px solid #007991;
                         input {
-                            width: 90%;
-                            height: 80%;
+                            width: 100%;
+                            height: 100%;
                             box-shadow: none;
                             border-radius: none;
-                            // line-height: 1;
                             border: none;
-                            background-color: #89cff0;
+                            background-color: #1f1f1f;
                             font-family: "Roboto-Regular", "Roboto";
                             font-size: 20px;
                             font-weight: 600;
                             color: #fff;
-                            // box-shadow: 10px 10px 30px #89cff0;
-                            // box-shadow: 3px 3px 10px #89cff0;
-
+                            // transition: 2s;
                             &:focus {
                                 outline: none;
                             }
                             &::placeholder {
                                 color: #fff;
                             }
+                        }
+                    }
+                    .btn-search {
+                        width: 60px;
+                        height: 100%;
+                        background-color: #1f1f1f;
+                        border: none;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:focus {
+                            outline: none;
                         }
                     }
                 }
@@ -118,22 +144,28 @@
                     background-color: #1f1f1f;
                     // border: 1px solid red;
                     .suggestions {
-                        width: 100%;
+                        padding: 20px;
+                        width: 70%;
                         height: 100%;
                         // border: 1px solid green;
-                        background-color: #000;
+                        background-color: #181818;
                         color: #fff;
-
+                        border-bottom-left-radius: 40px;
+                        border-bottom-right-radius: 40px;
                         .suggestion-items {
                             width: 100%;
-                            height: 30%;
+                            height: 40%;
                             // border: 1px solid red;
-                            border-bottom: 1px solid #e5e5e5;
+                            // border-bottom: 1px solid #e5e5e5;
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            font-size: 17px;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            font-family: "Roboto-Regular", "Roboto";
                             &:hover {
-                                background-color: #48d1cc;
+                                background: linear-gradient(to right, #283c86, #45a247);
                                 cursor: pointer;
                             }
                         }
@@ -176,7 +208,7 @@
                     }
                 }
                 .slider-container {
-                    width: 100%;
+                    width: 70%;
                     height: 30%;
 
                     // flex-basis: 10px;
@@ -214,9 +246,8 @@
                     }
                 }
                 .slider-container {
-                    width: 100%;
                     height: 30%;
-
+                    width: 70%;
                     // flex-basis: 10px;
                     // border: 2px solid red;
                 }

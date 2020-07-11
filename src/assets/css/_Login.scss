@@ -33,13 +33,11 @@
         border-radius: 0;
         padding: 0 !important;
         border: none;
-        border-bottom: 2px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
         box-shadow: none;
         background-color: #1f1f1f;
         &:focus {
-          // box-shadow: none;
-          // outline: 0 !important;
-          border-bottom: 2px solid cyan;
+          border-bottom: 1px solid #4ca2cd;
         }
       }
     }
@@ -50,11 +48,11 @@
         border-radius: 0;
         padding: 0 !important;
         border: none;
-        border-bottom: 2px solid #e5e5e5;
+        border-bottom: 1px solid #fff;
         box-shadow: none;
         background-color: #1f1f1f;
         &:focus {
-          border-bottom: 2px solid cyan;
+          border-bottom: 1px solid #4ca2cd;
         }
       }
     }

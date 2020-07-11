@@ -10,6 +10,15 @@
     // opacity: 0.85;
 }
 
+*::-webkit-scrollbar {
+    width: 5px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #abc2e8;
+    border-radius: none;
+}
+
 @import "common.scss";
 @import "Navbar.scss";
 @import "Login.scss";

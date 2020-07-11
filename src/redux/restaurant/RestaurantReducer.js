@@ -4,6 +4,7 @@ const initialState = {
   restaurantList: [],
   menuList: [],
   suggestions: [],
+  filteredRestaurants: [],
 };
 
 const restataurantReducer = (state = initialState, action) => {
@@ -23,6 +24,12 @@ const restataurantReducer = (state = initialState, action) => {
         ...state,
         suggestions: action.payload,
       };
+    case actionTypes.FILTER_RESTAURANTS:
+      return {
+        ...state,
+        filteredRestaurants: action.payload,
+      };
+
     default:
       return state;
   }

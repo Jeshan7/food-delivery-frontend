@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/css/Homepage.scss";
+import vegIcon from "../../assets/images/veg-icon.png";
+import nonVegIcon from "../../assets/images/non-veg-icon.png";
 
 const MenuItems = (props) => {
   const [quantity, setQuantity] = useState(0);
@@ -18,11 +20,13 @@ const MenuItems = (props) => {
   return (
     <div className="MenuItems">
       <div className="food-category-container">
-        <div className="food-category">v</div>
+        <div className="food-category">
+          <img src={nonVegIcon} />
+        </div>
       </div>
       <div className="food-name-container">
         <div className="food-name">
-          <span>dish 1</span>
+          <span>Chicken briyani</span>
         </div>
       </div>
       <div className="food-quantity-container">

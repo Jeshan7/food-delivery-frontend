@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import "../assets/css/Homepage.scss";
 import RestaurantsList from "../components/RestaurantsList/RestaurantsList";
 import { connect } from "react-redux";
-import { fetchRestaurantList } from "../redux/restaurant/RestaurantActions";
+import {
+  fetchRestaurantList,
+  fetchRestaurant,
+  filterRestaurants,
+} from "../redux/restaurant/RestaurantActions";
 import SearchBar from "../components/RestaurantsList/SearchBar";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
@@ -15,16 +19,26 @@ class SearchContainer extends Component {
     filter_ratings: 0,
     filter_cost: 0,
   };
+
   componentDidMount() {
-    this.props.fetchRestaurantList();
+    // this.props.fetchRestaurantList();
   }
 
   handleRatings = (value) => {
     this.setState({ filter_ratings: value });
+    let filteredByRating = this.props.restaurants.filter((doc) => {
+      return doc.ratings >= value;
+    });
+    console.log("asnjdnasjdnjsadn", this.props.filteredRestaurants);
+    this.props.filterRestaurants(filteredByRating);
   };
 
   handleCost = (value) => {
     this.setState({ filter_cost: value });
+    let x = this.props.restaurants.filter((doc) => {
+      return doc.cost_for_two <= value;
+    });
+    // console.log("asasa", x);
   };
 
   render() {
@@ -52,7 +66,7 @@ class SearchContainer extends Component {
                   <span>{this.state.filter_ratings}</span>
                 </div>
               </div>
-              <div className="filter-cost">
+              {/* <div className="filter-cost">
                 <div className="heading-cost">
                   <span>Cost for two</span>
                 </div>
@@ -60,14 +74,14 @@ class SearchContainer extends Component {
                   <Slider
                     value={this.state.filter_cost}
                     orientation="horizontal"
-                    max={1000}
+                    max={500}
                     onChange={this.handleCost}
                   />
                 </div>
                 <div className="cost-value">
                   <span>{this.state.filter_cost}</span>
                 </div>
-              </div>
+              </div> */}
               {/* <div className="filter-3"></div> */}
             </div>
             <div className="col-md-9 col-restaurants-container">
@@ -82,13 +96,17 @@ class SearchContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    restaurants: state.restaurant.restaurants,
+    restaurants: state.restaurant.restaurantList,
+    filteredRestaurants: state.restaurant.filteredRestaurants,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchRestaurantList: () => dispatch(fetchRestaurantList()),
+    filterRestaurants: (filteredByRating) =>
+      dispatch(filterRestaurants(filteredByRating)),
+    // filterRestaurants: (val) => dispatch(filterRestaurants(val)),
   };
 };
 

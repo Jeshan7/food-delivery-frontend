@@ -1,5 +1,5 @@
 .menu-container {
-    border: 1px solid black;
+    // border: 1px solid black;
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
@@ -7,21 +7,28 @@
 }
 
 .MenuItems {
-    border-bottom: 1px solid yellow;
+    // border-bottom: 1px solid yellow;
     width: 100%;
     height: 10%;
     display: flex;
     .food-category-container {
-        border: 1px solid red;
+        // border: 1px solid red;
         width: 5%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         .food-category {
-            border: 1px solid green;
-            width: 50%;
+            // border: 1px solid green;
+            width: 40%;
             height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 140%;
+                height: 120%;
+            }
         }
     }
     .food-name-container {
@@ -32,39 +39,57 @@
         justify-content: center;
         align-items: center;
         .food-name {
-            border: 1px solid green;
+            // background-color: #6a197d;
+            background: linear-gradient(to right, #191654, #43c6ac);
+            box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.9);
             width: 90%;
             height: 50%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            padding-left: 30px;
+            span {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: "Roboto-Regular", "Roboto";
+                text-transform: capitalize;
+            }
         }
     }
     .food-quantity-container {
-        border: 1px solid red;
+        // border: 1px solid red;
         width: 20%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         .food-quantity {
-            border: 1px solid green;
+            // border: 1px solid green;
             width: 90%;
             height: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
             .btn-minus {
-                border: 1px solid red;
+                // border: 1px solid red;
+                background-color: #43c6ac;
                 width: 30%;
                 height: 70%;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #fff;
+                box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.9);
+                &:hover {
+                    background-image: linear-gradient(107deg, #43c6ac, #f8ffae);
+                    box-shadow: 0 0px 20px 0 #f8ffae;
+                }
+                // box-shadow: 10px 30px 20px 0 rgba(0, 0, 0, 0.5);
             }
             .input-quantity {
-                border: 1px solid red;
+                // border: 1px solid red;
                 width: 60%;
                 height: 70%;
                 input {
@@ -75,31 +100,52 @@
                 }
             }
             .btn-plus {
-                border: 1px solid red;
+                // border: 1px solid red;
+                background-color: #43c6ac;
                 width: 30%;
                 height: 70%;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #fff;
+                box-shadow: 0 50px 40px 0 rgba(0, 0, 0, 0.9);
+                // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.8);
+                &:hover {
+                    background-image: linear-gradient(107deg, #43c6ac, #f8ffae);
+                    box-shadow: 0 0px 20px 0 #f8ffae;
+                }
             }
         }
     }
     .add-to-cart-container {
-        border: 1px solid red;
         width: 25%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .add-to-cart {
-            border: 1px solid cyan;
+            border: 2px solid #fff;
             width: 70%;
             height: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            transition: all 0.4s ease 0s;
+            &:hover {
+                background: linear-gradient(to right, #67b26f, #4ca2cd);
+                border-radius: 50px;
+                border: none;
+            }
+            span {
+                color: #fff;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            // background-color: red;
         }
     }
 }

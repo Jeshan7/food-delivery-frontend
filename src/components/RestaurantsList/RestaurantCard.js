@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
         <div className="restaurant-image">
           <div className="btn-container">
             <button className="btn-view-menu">
-              <Link to={`/restaurant/${props.restaurantDetails._id}`}>
+              <Link to={`/restaurant/${props.restaurantDetails.restaurant_id}`}>
                 View Menu
               </Link>
               {/* <button onClick={handleViewMenu}>View Menu</button> */}
@@ -29,15 +29,13 @@ const RestaurantCard = (props) => {
             <div className="description">
               <div className="value-description">
                 {/* {props.restaurantDetails.location} */}
-                <span>
-                  qwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsazxcvbnmqwertyuioplkjhgfdsa
-                </span>
+                <span>{props.restaurantDetails.description}</span>
               </div>
             </div>
             <div className="address">
               <div className="value-address">
                 <span>City</span>
-                <span>Mumbai</span>
+                <span>{localStorage.getItem("current-city")}</span>
               </div>
             </div>
           </div>

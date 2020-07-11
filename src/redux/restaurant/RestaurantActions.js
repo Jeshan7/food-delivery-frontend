@@ -23,6 +23,13 @@ export const fetchMenu = (menu) => {
   };
 };
 
+export const filterRestaurants = (restaurants) => {
+  return {
+    type: actionTypes.FILTER_RESTAURANTS,
+    payload: restaurants,
+  };
+};
+
 // export const searchRestaurants = (restaurants) => {
 //   return {
 //     type: actionTypes.SEARCH_RESTAURANT,
@@ -44,21 +51,19 @@ export const fetchMenuItems = () => {
   };
 };
 
-export const suggestRestaurants = (name, location) => {
+export const suggestRestaurants = (name) => {
   return async (dispatch) => {
-    const { data } = await post("restaurants/suggestions", {
+    const { data } = await post("search/suggestions", {
       name,
-      location: "Mumbai",
+      location: localStorage.getItem("current-city"),
     });
-    dispatch(fetchSuggestions(data.restaurant));
-    console.log("rest", data.restaurant);
+    dispatch(fetchSuggestions(data.restaurants));
   };
 };
 
 export const searchRestaurants = (name) => {
   return async (dispatch) => {
-    const { data } = await search("restaurants/search", name);
-    // console.log("sasqas", data);
-    dispatch(fetchRestaurant(data.restaurant));
+    const { data } = await search("search", name);
+    dispatch(fetchRestaurant(data.restaurants));
   };
 };

@@ -14,7 +14,6 @@ class RestaurantContainer extends Component {
   };
 
   async componentDidMount() {
-    console.log("sas", this.props);
     await this.props.fetchMenuItems();
     this.currentMenuItems();
   }
@@ -58,22 +57,15 @@ class RestaurantContainer extends Component {
           <Navbar />
         </div>
         <div className="row row-pictures">
-          <div className="col-md-10 col-pictures"></div>
+          <div className="col-md-10 col-pictures">
+            <div className="restaurant-name"> Jeshan Khan</div>
+          </div>
         </div>
         <div className="row row-options">
           <div className="col-md-6 col-options">
             <div className="option-navigation">
-              {/* <div
-                className="overview"
-                onClick={() => this.handleOptions("overview")}
-              >
-                <div className="image-overview"></div>
-                <div className="text-overview">
-                  <div> Overview</div>
-                </div>
-              </div> */}
               <div className="menu" onClick={() => this.handleOptions("menu")}>
-                <div className="image-menu"></div>
+                {/* <div className="image-menu"></div> */}
                 <div className="text-menu">
                   <div> Menu</div>
                 </div>
@@ -82,7 +74,7 @@ class RestaurantContainer extends Component {
                 className="photos"
                 onClick={() => this.handleOptions("photos")}
               >
-                <div className="image-photos"></div>
+                {/* <div className="image-photos"></div> */}
                 <div className="text-photos">
                   <div> Photos </div>
                 </div>
@@ -91,7 +83,15 @@ class RestaurantContainer extends Component {
           </div>
         </div>
         <div className="row row-content">
-          <div className="col-md-8 col-content">{currentSlide}</div>
+          <div className="col-md-8 col-content">
+            {/* <div className="current-slide"> */}
+            {currentSlide}
+            {/* </div> */}
+            {/* <div className="btn-place-order">dsadjd</div> */}
+          </div>
+          <div className="col-md-2 col-btn-container">
+            <div className="btn-place-order ">place order</div>
+          </div>
         </div>
         <div className="footer-restaurant"></div>
       </div>
