@@ -31,7 +31,7 @@ class Register extends Component {
       this.props.handleSignUp(this.state);
     }
 
-    if (!error && !this.props.userError) {
+    if (!this.props.userError) {
       this.props.history.push("/");
     }
   };

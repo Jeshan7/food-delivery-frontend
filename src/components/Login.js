@@ -30,7 +30,7 @@ class Login extends Component {
       this.props.handleSignIn(this.state);
     }
 
-    if (!error && !this.props.userError) {
+    if (!this.props.userError) {
       this.props.history.push("/");
     }
   };
