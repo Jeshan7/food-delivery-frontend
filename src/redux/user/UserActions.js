@@ -16,6 +16,13 @@ export const signIn = (userObj) => {
   };
 };
 
+export const handleError = (error) => {
+  return {
+    type: actionTypes.USER_ERROR,
+    payload: error,
+  };
+};
+
 export const logOut = () => {
   return {
     type: actionTypes.LOGOUT,
@@ -33,12 +40,21 @@ export const handleSignUp = (userObj) => {
 
 export const handleSignIn = (userObj) => {
   return async (dispatch) => {
-    const { data } = await SignIn(userObj);
-    if (data.message === "Authentication successful") {
-      dispatch(signIn(data.currentUser));
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("userEmail", data.currentUser.email);
-      localStorage.setItem("userName", data.currentUser.name);
-    }
+    // const data = await SignIn(userObj);
+    SignIn(userObj)
+      .then((response) => {
+        const { data } = response;
+        if (data.message === "Authentication successful") {
+          dispatch(signIn(data.currentUser));
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("userEmail", data.currentUser.email);
+          localStorage.setItem("userName", data.currentUser.name);
+        }
+      })
+      .catch((err) => {
+        if (err.message === "Request failed with status code 401") {
+          dispatch(handleError("Authentication Failed "));
+        }
+      });
   };
 };

@@ -36,10 +36,13 @@ const SearchBar = (props) => {
     e.preventDefault();
     dispatch(searchRestaurants(name));
     openModal(false);
+    setIsOpen(false);
   };
 
-  const handleSuggestion = (restaurant_id) => {
-    props.history.push(`/restaurant/${restaurant_id}`);
+  const handleSuggestion = (restaurant) => {
+    props.history.push(
+      `/restaurant/${restaurant.name}/${restaurant.restaurant_id}`
+    );
   };
 
   const handleModal = () => {
@@ -74,7 +77,7 @@ const SearchBar = (props) => {
                 return (
                   <div
                     className="suggestion-items"
-                    onClick={() => handleSuggestion(doc.restaurant_id)}
+                    onClick={() => handleSuggestion(doc)}
                   >
                     <span>{doc.name}</span>
                   </div>

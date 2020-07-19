@@ -10,6 +10,7 @@ import {
 import SearchBar from "../components/RestaurantsList/SearchBar";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
+import Navbar from "../components/Navbar";
 // import "react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css";
 // import RangeSlider from "react-bootstrap-range-slider";
 
@@ -33,17 +34,19 @@ class SearchContainer extends Component {
     this.props.filterRestaurants(filteredByRating);
   };
 
-  handleCost = (value) => {
-    this.setState({ filter_cost: value });
-    let x = this.props.restaurants.filter((doc) => {
-      return doc.cost_for_two <= value;
-    });
-    // console.log("asasa", x);
-  };
+  // handleCost = (value) => {
+  //   this.setState({ filter_cost: value });
+  //   let x = this.props.restaurants.filter((doc) => {
+  //     return doc.cost_for_two <= value;
+  //   });
+  // };
 
   render() {
     return (
       <div className="SearchContainer">
+        <div className="abcd">
+          <Navbar />
+        </div>
         <div className="row row-container">
           <div className="row row-search-container">
             <SearchBar />

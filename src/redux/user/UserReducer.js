@@ -3,6 +3,7 @@ import * as actionTypes from "./UserTypes";
 const initialState = {
   currentUser: {},
   isAuthenticated: false,
+  userError: null,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -24,6 +25,11 @@ const userReducer = (state = initialState, action) => {
         ...state,
         currentUser: {},
         isAuthenticated: false,
+      };
+    case actionTypes.USER_ERROR:
+      return {
+        ...state,
+        userError: action.payload,
       };
     default:
       return state;

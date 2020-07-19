@@ -11,6 +11,7 @@ import SearchContainer from "./containers/SearchContainer";
 import RestaurantContainer from "./containers/RestaurantContainer";
 import { useDispatch } from "react-redux";
 import { signIn } from "./redux/user/UserActions";
+import Order from "./components/Order";
 
 function App() {
   const dispatch = useDispatch();
@@ -36,9 +37,10 @@ function App() {
           <Route path="/register" component={AuthenticationPage} />
           <Route path="/restaurants" component={SearchContainer} />
           <Route
-            path="/restaurant/:restaurant_id"
+            path="/restaurant/:restaurant_name/:restaurant_id"
             component={RestaurantContainer}
           />
+          <Route path="/order" component={Order} />
         </Switch>
       </Router>
     </div>

@@ -6,7 +6,7 @@
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
-    height: 740px;
+    height: 876px;
     // opacity: 0.85;
 }
 
@@ -21,7 +21,9 @@
 
 @import "common.scss";
 @import "Navbar.scss";
+@import "description.scss";
 @import "Login.scss";
+@import "register.scss";
 @import "auth.scss";
 @import "overview.scss";
 @import "footer.scss";
@@ -30,3 +32,4 @@
 @import "searchContainer.scss";
 @import "restaurantContainer.scss";
 @import "menu.scss";
+@import "order.scss";

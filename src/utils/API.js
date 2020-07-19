@@ -13,9 +13,9 @@ export const get = async (basePath) => {
   return await axios.get(`/${basePath}`);
 };
 
-export const search = async (basePath, name) => {
-  return await axios.get(`/${basePath}`, { params: { q: name } });
-};
+// export const search = async (basePath, name) => {
+//   return await axios.get(`/${basePath}`, { params: { q: name } });
+// };
 
 export const post = async (basePath, data) => {
   return await axios.post(`/${basePath}`, data);

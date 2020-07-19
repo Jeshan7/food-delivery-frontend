@@ -63,7 +63,8 @@ export const suggestRestaurants = (name) => {
 
 export const searchRestaurants = (name) => {
   return async (dispatch) => {
-    const { data } = await search("search", name);
+    const queryData = { name, location: localStorage.getItem("current-city") };
+    const { data } = await post("search", queryData);
     dispatch(fetchRestaurant(data.restaurants));
   };
 };

@@ -1,10 +1,10 @@
 .row-container {
     width: 100%;
-    height: 900px;
+    height: 1000px;
     .row-search-container {
         width: 100%;
         height: 35%;
-        background-color: #1f1f1f;
+        background-color: #27272c;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -14,10 +14,10 @@
             // border: 1px solid black;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: flex-end;
             .select-city-container {
                 width: 15%;
-                height: 100%;
+                height: 80%;
                 cursor: pointer;
                 display: flex;
                 justify-content: space-between;
@@ -25,19 +25,16 @@
                 flex-direction: column;
                 // border: 1px solid red;
                 .current-city {
-                    width: 60%;
+                    width: 80%;
                     height: 20%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     // border: 1px solid yellow;
-                    border-radius: 50px;
+                    border-radius: 20px;
                     background: linear-gradient(to right, #36d1dc, #5b86e5);
-                    box-shadow: 0 -3px 20px 0 linear-gradient(to right, #36d1dc, #5b86e5);
+                    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.8);
                     transition: 0.4s;
-                    &:hover {
-                        border-radius: 0px;
-                    }
                     span {
                         color: #fff;
                         font-size: 18px;
@@ -46,18 +43,16 @@
                     }
                 }
                 .options-city {
-                    width: 80%;
+                    width: 60%;
                     height: 80%;
                     background-color: #181818;
                     box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
-                    // border: 1px solid green;
-                    border-radius: 40px;
                     .options {
                         width: 100%;
                         height: 25%;
-                        border-bottom: 0.01em solid #fff;
+                        // border-bottom: 1px solid #fff;
                         // border: 1px solid yellow;
-                        border-radius: 40px;
+
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -75,8 +70,8 @@
                 }
             }
             .search-container {
-                width: 80%;
-                height: 100%;
+                width: 70%;
+                height: 90%;
                 // border: 1px solid green;
                 display: flex;
                 flex-direction: column;
@@ -102,7 +97,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 10px;
+                        padding: 15px;
                         border-bottom: 1px solid #007991;
                         input {
                             width: 100%;
@@ -110,7 +105,7 @@
                             box-shadow: none;
                             border-radius: none;
                             border: none;
-                            background-color: #1f1f1f;
+                            background-color: #27272c;
                             font-family: "Roboto-Regular", "Roboto";
                             font-size: 20px;
                             font-weight: 600;
@@ -127,10 +122,10 @@
                     .btn-search {
                         width: 60px;
                         height: 100%;
-                        background-color: #1f1f1f;
+                        background-color: #27272c;
                         border: none;
                         img {
-                            width: 100%;
+                            width: 90%;
                             height: 100%;
                         }
                         &:focus {
@@ -141,7 +136,7 @@
                 .suggestion-container {
                     width: 60%;
                     height: 50%;
-                    background-color: #1f1f1f;
+                    background-color: #27272c;
                     // border: 1px solid red;
                     .suggestions {
                         padding: 20px;
@@ -177,7 +172,7 @@
     .row-restaurants-container {
         width: 100%;
         height: 100%;
-        background-color: #1f1f1f;
+        background-color: #27272c;
         .col-filter-container {
             padding: 0 !important;
             margin: 0 !important;
@@ -185,12 +180,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
             .filter-ratings {
                 width: 80%;
                 height: 30%;
                 box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
                 background-color: #181818;
+                margin: 15%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -274,6 +270,8 @@
             margin: 0 !important;
             display: flex;
             justify-content: center;
+            align-items: flex-start;
+            // border: 1px solid black;
             .RestaurantsList {
                 width: 80%;
                 height: 100%;

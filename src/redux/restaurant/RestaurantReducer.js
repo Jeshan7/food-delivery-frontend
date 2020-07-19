@@ -5,6 +5,7 @@ const initialState = {
   menuList: [],
   suggestions: [],
   filteredRestaurants: [],
+  userError: null,
 };
 
 const restataurantReducer = (state = initialState, action) => {

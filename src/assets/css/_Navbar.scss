@@ -12,6 +12,11 @@
     height: 100%;
     padding: 0 !important;
     margin: 0 !important;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.8);
     .navbar-brand-box {
       padding: 0 !important;
       margin: 0 !important;
@@ -22,81 +27,102 @@
       margin: 0 !important;
       display: flex;
       justify-content: center;
+
       .nav-links {
         padding: 0 !important;
         margin: 0 !important;
         width: 30%;
+        height: 30px;
         display: flex;
         justify-content: center;
-        .link-1 {
-          text-decoration: none;
-          color: #909090;
+        // border: 1px solid black;
+        .link-home {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           a {
             color: #909090;
             font-family: "Roboto-Regular", "Roboto";
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
-            padding: 10px;
-            text-decoration: none;
-            line-height: 1;
-            
-            position: relative;
-            z-index: 0;
-            display: inline-block;
-            padding: 5px 5px;
-            overflow: hidden;
-            // color: #333;
-            vertical-align: bottom;
-            transition: color .3s ease-out;
-            &::before {
-              content: "";
-              position: absolute;
-              z-index: -1;
-              top: 0;
-              left: 0;
-              transform: translateY(calc(100% - 2px));
-              width: 100%;
-              height: 100%;
-              background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
-              // background-color: black;
-              transition: transform .25s ease-out;
+            &:hover {
+              text-decoration: none !important;
+              color: #000;
+            }
+          }
+        }
+        .link-login {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            color: #909090;
+            font-family: "Roboto-Regular", "Roboto";
+            font-size: 16px;
+            font-weight: 600;
+            &:hover {
+              text-decoration: none !important;
+              color: #000;
+            }
+          }
+        }
+        .link-register {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            color: #909090;
+            font-family: "Roboto-Regular", "Roboto";
+            font-size: 16px;
+            font-weight: 600;
+            &:hover {
+              text-decoration: none !important;
+              color: #000;
+            }
+          }
+        }
+      }
+      .navlinks-auth {
+        // border: 1px solid black;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .link-home-auth {
+          a {
+            color: #909090;
+            font-family: "Roboto-Regular", "Roboto";
+            font-size: 18px;
+            font-weight: 600;
+            &:hover {
+              text-decoration: none !important;
+              color: #000;
+              // border-bottom: 2px solid #fff;
+            }
+          }
+        }
+        .link-logout {
+          // border: 1px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          width: 30%;
+          height: 100%;
 
-              padding: 10px;
-           }
-            &:hover {
-              padding: 10px;
-              text-decoration: none !important;
-              color: #fff;
-            }
-            &:hover::before {
-              transform: translateY(0);
-              transition: transform 0.25s ease-out;
-              padding: 10px;
+          // border: 4px solid #fff;
+          &:hover {
+            span {
+              color: #000;
             }
           }
-        }
-        .link-2 {
-          a {
+
+          span {
             color: #909090;
             font-family: "Roboto-Regular", "Roboto";
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
-            &:hover {
-              text-decoration: none !important;
-              color: #e8e8e8;
-            }
-          }
-        }
-        .link-3 {
-          a {
-            color: #909090;
-            font-family: "Roboto-Regular", "Roboto";
-            font-size: 14px;
-            font-weight: 600;
-            &:hover {
-              text-decoration: none !important;
-              color: #e8e8e8;
-            }
           }
         }
       }

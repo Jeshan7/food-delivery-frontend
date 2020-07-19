@@ -2,6 +2,7 @@ import React from "react";
 import "../../assets/css/Homepage.scss";
 import RestaurantCard from "./RestaurantCard";
 import { useSelector } from "react-redux";
+import notFoundIcon from "../../assets/images/not-found.png";
 
 const RestaurantsList = () => {
   const restaurants = useSelector((state) => state.restaurant.restaurantList);
@@ -32,7 +33,10 @@ const RestaurantsList = () => {
           })
         )
       ) : (
-        <div style={{ color: "#fff" }}>No restaurants to show</div>
+        <div className="not-found-container">
+          <span>Nothing to show</span>
+          <img src={notFoundIcon} />
+        </div>
       )}
 
       {/* 

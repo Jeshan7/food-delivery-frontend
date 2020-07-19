@@ -6,6 +6,7 @@ import Overview from "../components/Overview";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Description from "../components/Description";
+import Order from "../components/Order";
 
 class Homepage extends Component {
   render() {
@@ -17,7 +18,7 @@ class Homepage extends Component {
         <Header />
         <Overview />
         <Description />
-        <Footer />
+        {/* <Footer /> */}
         <div></div>
       </div>
     );

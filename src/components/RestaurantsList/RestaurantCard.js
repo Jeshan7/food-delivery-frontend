@@ -3,13 +3,16 @@ import "../../assets/css/Homepage.scss";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="RestaurantCard">
       <div className="card-container">
         <div className="restaurant-image">
           <div className="btn-container">
             <button className="btn-view-menu">
-              <Link to={`/restaurant/${props.restaurantDetails.restaurant_id}`}>
+              <Link
+                to={`/restaurant/${props.restaurantDetails.name}/${props.restaurantDetails.restaurant_id}`}
+              >
                 View Menu
               </Link>
               {/* <button onClick={handleViewMenu}>View Menu</button> */}

@@ -20,20 +20,20 @@
         align-items: center;
         .food-category {
             // border: 1px solid green;
-            width: 40%;
-            height: 40%;
+            width: 70%;
+            height: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             img {
-                width: 140%;
-                height: 120%;
+                width: 100%;
+                height: 100%;
             }
         }
     }
     .food-name-container {
         // border: 1px solid red;
-        width: 50%;
+        width: 40%;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -44,10 +44,37 @@
             box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.9);
             width: 90%;
             height: 50%;
+            border-radius: 20px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             padding-left: 30px;
+            span {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: "Roboto-Regular", "Roboto";
+                text-transform: capitalize;
+            }
+        }
+    }
+    .food-rate-container {
+        width: 15%;
+        height: 100%;
+        // border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .food-rate {
+            width: 90%;
+            height: 50%;
+            // border: 1px solid green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #191654, #43c6ac);
+            box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.9);
+            border-radius: 20px;
             span {
                 color: #fff;
                 font-size: 16px;
@@ -82,6 +109,7 @@
                 align-items: center;
                 color: #fff;
                 box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.9);
+                border-radius: 30px;
                 &:hover {
                     background-image: linear-gradient(107deg, #43c6ac, #f8ffae);
                     box-shadow: 0 0px 20px 0 #f8ffae;
@@ -97,6 +125,9 @@
                     height: 100%;
                     border: none;
                     text-align: center;
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
             .btn-plus {
@@ -110,6 +141,7 @@
                 align-items: center;
                 color: #fff;
                 box-shadow: 0 50px 40px 0 rgba(0, 0, 0, 0.9);
+                border-radius: 30px;
                 // box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.8);
                 &:hover {
                     background-image: linear-gradient(107deg, #43c6ac, #f8ffae);

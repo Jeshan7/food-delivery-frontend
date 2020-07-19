@@ -6,11 +6,13 @@ import Photos from "../components/Restaurant/Photos";
 import Navbar from "../components/Navbar";
 import { connect } from "react-redux";
 import { fetchMenuItems } from "../redux/restaurant/RestaurantActions";
+import order_icon from "../assets/images/btn-login.png";
 
 class RestaurantContainer extends Component {
   state = {
     currentOption: "menu",
     menuItems: null,
+    placeOrder: true,
   };
 
   async componentDidMount() {
@@ -35,9 +37,17 @@ class RestaurantContainer extends Component {
     } else if (option === "photos") {
       this.setState({ currentOption: "photos" });
     }
-    // else {
-    //   this.setState({ currentOption: "overview" });
-    // }
+  };
+
+  handleOrder = () => {
+    if (localStorage.getItem("foodItems")) {
+      this.props.history.push("/order");
+    } else {
+      this.setState({ placeOrder: false });
+      setTimeout(() => {
+        this.setState({ placeOrder: true });
+      }, 5000);
+    }
   };
 
   render() {
@@ -47,9 +57,8 @@ class RestaurantContainer extends Component {
     } else if (this.state.currentOption === "photos") {
       currentSlide = <Photos />;
     }
-    //  else {
-    //   currentSlide = <Overview />;
-    // }
+    let x = JSON.parse(localStorage.getItem("foodItems"));
+    console.log(x);
 
     return (
       <div className="RestaurantContainer">
@@ -58,7 +67,9 @@ class RestaurantContainer extends Component {
         </div>
         <div className="row row-pictures">
           <div className="col-md-10 col-pictures">
-            <div className="restaurant-name"> Jeshan Khan</div>
+            <div className="restaurant-name">
+              <span>{this.props.match.params.restaurant_name}</span>
+            </div>
           </div>
         </div>
         <div className="row row-options">
@@ -90,7 +101,16 @@ class RestaurantContainer extends Component {
             {/* <div className="btn-place-order">dsadjd</div> */}
           </div>
           <div className="col-md-2 col-btn-container">
-            <div className="btn-place-order ">place order</div>
+            <div className="btn-place-order" onClick={this.handleOrder}>
+              <span>Place Order</span>
+              <img src={order_icon} />
+            </div>
+
+            {!this.state.placeOrder ? (
+              <div className="status-container">
+                <span>No Item Selected</span>
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="footer-restaurant"></div>
